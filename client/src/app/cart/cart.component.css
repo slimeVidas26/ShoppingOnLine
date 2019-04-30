@@ -1,0 +1,31 @@
+.back-to-top{
+    float:right;
+    text-decoration: underline;
+    cursor:pointer
+}
+
+.cartImg{
+    width : 4rem;
+}
+
+.table td, .table th {
+     padding:0; 
+     vertical-align: middle; 
+    border-top: 1px solid #dee2e6;
+    margin-bottom: 5px;
+}
+.hidden{
+    display:none;
+}
+
+.btns{
+    margin-bottom:30px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+    margin-right: 20%;
+}
+

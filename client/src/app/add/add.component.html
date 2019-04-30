@@ -1,0 +1,74 @@
+<div class="row start">
+  
+  <div class="list-group edit col-md-12">
+
+    <span>product name</span> <span><i (click)="openAddForm()" class="fas fa-plus"></i></span>
+    <!-- <span><i (click)="openEditForm()" class="fas fa-pencil-alt"></i></span> -->
+
+    hello Admin
+
+  </div>
+
+
+
+
+  <div *ngIf="isAddForm">
+    you can add products
+    <form [formGroup]="formGroup" (ngSubmit)="createNewProduct()">
+     
+      <div class="form-group">
+        <label for="product_name">Product name</label>
+        <input type="input" [(ngModel)]="product_name" name="product_name" type="text" class="form-control" formControlName="productName"
+          placeholder="Product name">
+      </div>
+      <div class="form-group">
+        <label for="_id">ProductId</label>
+        <input type="input" [(ngModel)]="_id" type="text" name="_id" class="form-control" formControlName="productId" placeholder="Product id">
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="input" [(ngModel)]="price" type="text" name="price" class="form-control" formControlName="price" placeholder="Price">
+      </div>
+      <div class="form-group">
+        <label for="picture">Picture</label>
+        <!-- <input  [(ngModel)]="tmp.picture"  type="text" class="form-control" formControlName="picture" placeholder="Picture"> -->
+        <!-- <input [(ngModel)]="tmp.picture" type="file"  class="form-control" formControlName="picture" (change)="onFileChange($event)" #fileInput> -->
+        <!-- <input type="file" [(ngModel)]="picture" id="picture" class="form-control" formControlName="picture" (change)="onFileChange($event)" #fileInput> -->
+        <input type="file" name="picture" (change)="onFileChange($event)" formControlName="picture" #fileInput>
+
+      </div>
+
+      <div class="form-group">
+        <select [(ngModel)]="category" name="_category" class="custom-select" formControlName="category">
+          <!-- <option value=''>-- SELECT CATEGORY-- </option> -->
+          <option *ngFor="let category of categories" value={{category._id}}>
+            {{category.category_name}}
+          </option>
+        </select>
+      </div>
+
+
+      <button class="btn btn-primary pull-right" [disabled]="!formGroup.valid" type="submit">Add Product</button>
+
+    </form>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+</div>
+<div class="row">
+  <div class="col-md-12">
+ 
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,16 @@
+img{
+    width:70%;
+}
+.infos-1 , .infos-2 , .infos-3 , .infos-4 {
+margin-bottom: 20px;
+} 
+
+.card{
+    color:yellow;
+}
+.infos-1  img , .list-group  , .card{ display:block; margin:auto; }
+
+ .list-group {
+     
+margin-bottom:10px;
+ }

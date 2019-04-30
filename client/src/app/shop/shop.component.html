@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="  col-md-4 box form-group">
+        <div class="inner">
+            <div class="col-md-12">
+               
+              <!-- <cart (deleteProductEvent)="onDeleteProductEvent($event)"></cart> </cart> -->
+              <cart ></cart>
+              
+                
+              </div>
+          </div>
+     
+    </div>
+
+    <!-- <div
+    class=" col-md-4 box form-group"
+    [ngStyle]="style"
+    mwlResizable
+    [validateResize]="validate"
+    [resizeEdges]="{bottom: true, right: true, top: true, left: true}"
+    [enableGhostResize]="true"
+    [resizeSnapGrid]="{left: 50, right: 50}"
+    (resizeEnd)="onResizeEnd($event)">
+    <img
+      src="http://i.imgur.com/eqzz2dl.gif"
+      class="resize-handle"
+      mwlResizeHandle
+      [resizeEdges]="{bottom: true, right: true}">
+      <div class="inner">
+            <div class="col-md-12">
+               
+              <cart></cart>
+              
+                
+              </div>
+          </div>
+  </div> -->
+    <div class="  col-md-8 box form-group">
+            <div class="row">
+                    <div class="inner">
+                            <div class="col-md-12">
+                              <!-- <categories [parentData] = "categories"></categories> -->
+    <categories (selectCategory) = "onSelectCategory($event)" [categories] = "categories"></categories>
+
+                              </div>
+                          </div>
+            </div>
+
+
+
+            
+        <div class="row row-product">
+                <div class="inner">
+                        <div class="col-md-12">
+     <products *ngIf ="selectedCategory"  [category] = "selectedCategory" ></products>
+                          </div>
+                      </div>
+        </div>
+        <div class="row row-product">
+            <div class="inner">
+                    <div class="col-md-12">
+     <products  [products] = "products" ></products>
+                      </div>
+                  </div>
+    </div>
+        
+     
+    </div>
+    
+  </div>
+  
+

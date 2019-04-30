@@ -1,0 +1,30 @@
+/* .box{ */
+    /* resize: both;
+    overflow: auto;
+    border : 1px solid ; */
+/* } */
+
+.box {
+    position: relative;
+    /* top: 200px; */
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+    /* width: 300px; */
+    height: 520px;
+    /* background-color: #fd4140; */
+    border: solid 1px #121621;
+    color: #121621;
+    margin: auto;
+  }
+  .resize-handle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: se-resize;
+  }
+  .row-product{
+    /* height:520px; */
+    overflow:hidden;
+  }
+

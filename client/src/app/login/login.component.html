@@ -1,0 +1,56 @@
+<div class="row start">
+<div class="col-md-12">
+   
+     
+      <div class="card text-white bg-success mb-3">
+        <div class="card-header">Start shopping / resume shopping</div>
+        <div class="card-body">
+          <h4 class="card-title">Success card title</h4>
+          <p class="card-text">Available only for logged in users - secure it.</p>
+        </div>
+      </div>
+    
+    
+
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+ 
+  <form [formGroup]="formGroup" (validSubmit)="doLogin()">
+        <fieldset>
+          <legend>  Registered?</legend>
+         
+       
+          <div class="form-group">
+              <!-- <label class="control-label">Email</label> -->
+        <input [(ngModel)]="username" type="text" class="form-control" formControlName="Email" placeholder="UserName">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User name"> -->
+          </div>
+          <div class="form-group">
+              <!-- <label class="control-label">Password</label> -->
+              <input  [(ngModel)]="password" type="password" class="form-control" formControlName="Password" placeholder="Password">
+            <!-- <label for="exampleInputPassword1">Password</label> -->
+            <!-- <input [(ngModel)]="tmp.password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> -->
+          </div>
+         
+         
+        
+        
+          <!-- <a routerLink="/shop" routerLinkActive="active"> -->
+            <!-- <button type="submit" class="btn btn-primary">Login</button>  -->
+            <button class="btn btn-primary pull-right" type="submit">Login</button>
+                   <!-- </a> -->
+                   <a class="sign" routerLink="/signin" routerLinkActive="active">Sign up</a>
+         
+        </fieldset>
+      </form>
+
+
+  
+</div>
+</div>
+ 
+ 
+

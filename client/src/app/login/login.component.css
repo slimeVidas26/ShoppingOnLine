@@ -1,0 +1,29 @@
+.start{
+    margin-bottom: 70px
+}
+.form-control{
+    width : 60%
+}
+
+input  {
+     display:block; margin:auto;
+     }
+
+.sign {
+    text-decoration: underline;
+    font-weight:bold;
+    margin-left: 30%;
+}
+button {
+    margin-left: 30%;
+    margin-right: 75px;
+}
+
+
+
+legend {
+margin-left : 20%;
+font-size: 1rem;
+font-weight:bold
+}
+

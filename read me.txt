@@ -1,0 +1,17 @@
+Hi Yaniv
+
+
+
+- first of all please to delete the directory below when you will npm install (nodes_module).
+path to the directory to delete : ShoppingOnline/client/nodes_modules/ng-bootstrap-form-validation/node_module
+
+-to launch the server:npm start
+-mongodb database in database/shoppingOnline
+
+
+
+admin : dahan.isaac@gmail.com
+password : isaac
+
+Customer : customer@gmail.com
+password : customer

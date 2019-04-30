@@ -1,0 +1,25 @@
+/* .login{
+   
+    background-color: yellowgreen;
+}
+.about{
+  
+    background-color: rosybrown;
+}
+.infos{
+  
+    background-color:grey;
+} */
+
+/* .box {
+   
+    padding: 0 5px 0 10px;
+} */
+.box .inner {
+    background-color  : skyblue;
+    height:auto;
+    min-height: 520px;
+    padding : 15px;
+    margin-top: 15px;
+    border-radius:5px;
+}

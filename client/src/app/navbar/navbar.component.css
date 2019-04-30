@@ -1,0 +1,42 @@
+.navbar {
+  height: 120px;
+  background-color: brown;
+  width: 100%;
+  color: white
+}
+
+.navbar a{
+  color:white;
+}
+
+
+nav-item li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 10px;
+  color: #fff;
+}
+
+nav-item li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.glyphicon .glyphicon-search {
+  color: white;
+  font-size: 100px
+}
+
+.navbar-nav[_ngcontent-c1] {
+  display: flex;
+  flex-direction: column;
+  margin-left: 54%;
+  list-style: none;
+}
+
+.nav-item .contact {
+
+  padding: 10px;
+  border: 1px;
+  box-shadow: 3px 3px 3px grey;
+}

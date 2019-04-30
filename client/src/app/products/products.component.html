@@ -1,0 +1,88 @@
+<div *ngIf="!isAdmin" class="row">
+
+  <div  (click)="open(content); onSelect(product);" *ngFor="let product of products" >
+
+    <div class="middle"><img [src]=" 'http://localhost:3000/'+product.picture" [alt]="product.product_name" [title]="product.product_name"></div>
+
+    <div class="bottom">
+      <div class="price">{{price}}{{product.price}} </div>
+      <div class="heading"> <a routerLink="/shop/product/{{id}}">{{product.product_name}}</a></div>
+      <div class="info">{{product._category.category_name | json}}</div>
+      <div class="style">{{product._id}}</div>
+    </div>
+
+
+    <ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title">The product you choose !!</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="item-name">
+        </div>
+        <div class="middle"><img [src]=" 'http://localhost:3000/'+product.picture" [alt]="product.product_name" [title]="product.product_name"></div>
+
+        <div class="bottom">
+          <div class="price"> {{price}}{{product.price}} </div>
+          <div class="heading"> <a routerLink="/shop/product/{{id}}">{{product.product_name}}</a></div>
+          <div class="info">{{product._category.category_name | json}}</div>
+          <div class="style">{{product._id}}</div>
+        </div>
+        <form [formGroup]="formGroup">
+          <div class="form-group">
+            <!-- <label for="product._id">product._id</label> -->
+            <input type="text" [(ngModel)]="productId" class="form-control" formControlName="productId" />
+
+          </div>
+          <div class="form-group">
+            <label for="quantity">Select quantity</label>
+            <!-- <select [(ngModel)]="quantity" class="form-control" formControlName="Quantity">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select> -->
+            <input type="number" [(ngModel)]="quantity" formControlName="Quantity">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" (click)="c('Save click')">Close</button> -->
+        <!-- <button type="button" class="btn btn-secondary" (click)="addToCart(product)">Add</button> -->
+
+        <div class="product__button-wrap">
+          <!-- <button  *ngIf="product.added"  (click)="RemoveProduct(product)" class="btn btn-primary">Remove -->
+          <!-- </button> -->
+          <button (click)="AddProduct(product);c('Save click')" class="btn btn-primary">Add to
+            cart
+          </button>
+          <!-- <button (click)="addToCart(product)" class="btn btn-sm btn-primary">Add to Cart</button> -->
+         
+        
+      </div>
+    </div>
+    </ng-template>
+
+    <hr>
+
+  </div>
+</div>
+
+<div *ngIf="isAdmin" class="row">
+  <div  (click)=" onSelect(product);" *ngFor="let product of products">
+
+    <div class="middle"><img [src]=" 'http://localhost:3000/'+product.picture" [alt]="product.product_name" [title]="product.product_name"></div>
+
+    <div class="bottom">
+      <div class="price">{{price}}{{product.price}} </div>
+      <div class="heading"> <a routerLink="/shop/product/{{id}}">{{product.product_name}}</a></div>
+      <div class="info">{{product._category.category_name | json}}</div>
+      <div class="style">{{product._id}}</div>
+    </div>
+    <hr>
+  </div>
+</div>
+

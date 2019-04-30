@@ -1,0 +1,71 @@
+<div class="inner">
+    <div class="col-md-12">
+      
+        <h4>Order</h4>
+        <hr>
+        shipping details
+        <hr>
+        <form [formGroup]="formGroup" (validSubmit)="createOrder()">
+
+            <div class="form-group">
+                <select class="custom-select" formControlName="city">
+                  <option [ngValue]="null">Select City</option>
+                  <option *ngFor="let city of cities"  [ngValue]="option">
+                    {{city.name}}
+                  </option>
+                </select>
+              </div>
+      <div class="form-group">
+        <input  [(ngModel)]="tmp.delivery_adress"  type="text" class="form-control" formControlName="deliveryAdress" id="adress" placeholder="Adress">
+      </div>
+            <div class="form-group">
+                <div class="input-group">
+                  <input [(ngModel)]="tmp.delivery_date" id="deliveryDate" class="form-control" formControlName="deliveryDate" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" (click)="dp.toggle()" type="button">
+                      <img src="/assets/img/calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <h4>payments:</h4>
+              <hr>
+              <div class=" credit-card form-group">
+                  <i class="far fa-lock-alt"></i>
+                  <input [(ngModel)]="tmp.payment_method"  type="text" class="form-control" formControlName="paymentMethod" id="card"  placeholder="credit card must be at least 9 characters">
+                </div>
+            
+            <button type="submit" class="btn btn-primary pull-right" [disabled]="!formGroup.valid" (click)="open(content)">Order</button>
+
+          </form>
+      
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="dateOfBirth">Success!!</label>
+         
+        </div>
+
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+  </ng-template>
+  
+  
+  <hr>
+  
+  <pre>{{closeResult}}</pre>
+      
+        
+      </div>
+  </div>
